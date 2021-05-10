@@ -103,7 +103,11 @@ a#pdf:hover { background: #222; }
   width: 50%;
   padding: 5px;
 }
-
+ul.cols{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
 .major{position:relative; top:5px; }
 .yui-gf .line{margin-left:155px;width:80.2%;}
 .yui-gf .line_1{margin-left:15px;width:95%;}
