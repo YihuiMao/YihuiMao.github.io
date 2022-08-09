@@ -9,7 +9,17 @@
                         (matt brown)
 ---------------------------------------------------------------------------------
 */
-
+	/* Chrome version 22-28 */
+	@media screen and(-webkit-min-device-pixel-ratio:0) {
+	selector { -chrome-:only (;
+	property:value;
+	);}
+	}
+	
+	/* Chrome, Safari, and also the Edge Browser and Firefox */
+	@media and (-webkit-min-device-pixel-ratio:0) {
+	selector { property:value; }
+	}
 
 .msg { padding: 10px; background: #222; position: relative; }
 .msg h1 { color: #fff;  }
