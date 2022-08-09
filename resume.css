@@ -25,6 +25,9 @@ selector {
 property:value;
 }
 }
+@supports (-moz-appearance:none) {
+selector { property:value; }
+}
 /* Safari 11+ */
 @media not all and (min-resolution:.001dpcm)
 { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
