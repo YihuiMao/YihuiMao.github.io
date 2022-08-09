@@ -20,6 +20,79 @@
 	@media and (-webkit-min-device-pixel-ratio:0) {
 	selector { property:value; }
 	}
+	@-moz-document url-prefix() {
+selector {
+property:value;
+}
+}
+/* Safari 11+ */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+selector { 
+property:value; 
+}
+}}
+/* Test website on real Safari 11+ */
+
+/* Safari 10.1 */
+@media not all and (min-resolution:.001dpcm){ 
+@supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+selector { 
+property:value; 
+}
+}}
+
+/* Safari 6.1-10.0 (but not 10.1) */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0){ 
+@media {
+selector { 
+property:value;
+}
+}}
+
+@supports (-ms-ime-align:auto) {
+selector {
+property: value;
+}
+}
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="only-ie.css" />
+<![endif]-->
+
+/* Using conditional comments with head section CSS */
+<!--[if IE]>
+<style type="text/css">
+/************ css for all IE browsers ****************/
+</style>
+<![endif]-->
+
+/* Using conditional comments with HTML elements */
+<!--[if IE]> <div class="ie-only"> /*content*/ </div> <![endif]-->
+
+/* IE10+ */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+selector { property:value; }
+}
+
+/* IE6,7,9,10 */
+@media screen and (min-width: 640px), screen\9 {
+selector { property:value; }
+}
+
+/* IE6,7 */
+@media screen\9 {
+selector { property:value; }
+}
+
+/* IE8 */
+@media \0screen {
+selector { property:value; }
+}
+
+/* IE9,10 */
+@media screen and (min-width:0\0){
+selector { property:value; }
+}
 
 .msg { padding: 10px; background: #222; position: relative; }
 .msg h1 { color: #fff;  }
