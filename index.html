@@ -467,11 +467,12 @@ function myFunction(str,str1) {
   }
   else{
 	if (str1!="arrow4" && str1!="arrow5" )
-	   x.style.display = "block";
-	else
+	   {x.style.display = "block";
+	   document.getElementById(str1).innerHTML = "less";}
+	else{
 	   x.style.display = "none";
-
-	document.getElementById(str1).innerHTML = "more";
+	   document.getElementById(str1).innerHTML = "more";}
+	
   }
 
 }
